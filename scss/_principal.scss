@@ -1,0 +1,69 @@
+.main-index {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 0.7fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "titulo-index titulo-index titulo-index"
+        "estilos-populares estilos-populares estilos-populares"
+        "ofertas-destacadas ofertas-destacadas ofertas-destacadas";
+    
+    .titulo-index{
+        grid-area: titulo-index;
+        background-image:linear-gradient($color_fondo, $color_fondo_marron);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .estilos-populares { grid-area: estilos-populares;
+        background-color:  $color_fondo_marron;
+        
+        .cortes{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            justify-content: space-evenly;
+            
+            .carousel{
+                width: 750px ;
+                margin: 1rem 10px;
+                .color-carrusel{
+                    color: rgb(0, 0, 0);
+                    background-color: $color_fondo_claro;
+                }
+            }
+        } 
+    
+    }
+    .ofertas-destacadas { grid-area: ofertas-destacadas; 
+        background-color: $color_fondo_oscuro;
+        padding-top: 2rem;
+    }
+}
+@media screen and (max-width: 750px){
+    .main-index {  display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-auto-columns: 1fr;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "titulo-index titulo-index"
+            "estilos-populares estilos-populares"
+            "ofertas-destacadas ofertas-destacadas";
+        .titulo-index { grid-area: titulo-index; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .estilos-populares { grid-area: estilos-populares; }
+        .ofertas-destacadas{ grid-area: ofertas-destacadas; 
+            .productos{
+                display: flex;
+                flex-wrap: wrap;
+                .card{
+                    width: 210px;
+                    margin-top: 10px;
+                }
+            }
+        }    
+    }
+}

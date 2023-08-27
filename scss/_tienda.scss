@@ -1,0 +1,69 @@
+.main-tienda {  display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "titulo-tienda titulo-tienda titulo-tienda titulo-tienda    titulo-tienda"
+        "filtros-tienda tienda-promociones tienda-promociones tienda-promociones tienda-promociones"
+        "filtros-tienda tienda-geles tienda-geles tienda-geles tienda-geles"
+        "filtros-tienda tienda-tijeras tienda-tijeras tienda-tijeras tienda-tijeras"
+        "filtros-tienda tienda-tintes tienda-tintes tienda-tintes tienda-tintes";
+    
+    .titulo-tienda{
+        grid-area: titulo-tienda;
+        background-image: linear-gradient($color_fondo, $color_fondo_oscuro);
+        display: flex;
+        justify-content: center;
+    }
+    .filtros-tienda { grid-area: filtros-tienda; 
+        background-color: $color_filtros;
+    }
+    .tienda-promociones { grid-area: tienda-promociones; 
+        background-color: $color_fondo_oscuro ;
+    }
+    .tienda-geles { grid-area: tienda-geles; 
+        background-color: $color_fondo_marron;
+    }
+    .tienda-tijeras { grid-area: tienda-tijeras; 
+        background-color: $color_fondo_oscuro;
+    }
+    .tienda-tintes { grid-area: tienda-tintes; 
+        background-color: $color_fondo_marron;
+    }
+}
+@media screen and (max-width: 750px){
+    .main-tienda {  display: grid;
+        grid-template-columns: 0.5fr 1fr 1fr;
+        grid-template-rows: 1fr 0.1fr auto auto auto auto;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "titulo-tienda titulo-tienda titulo-tienda"
+            "filtros-tienda filtros-tienda filtros-tienda"
+            "tienda-promociones tienda-promociones tienda-promociones"
+            "tienda-geles tienda-geles tienda-geles"
+            "tienda-tijeras tienda-tijeras tienda-tijeras"
+            "tienda-tintes tienda-tintes tienda-tintes";
+        .titulo-tienda{
+            grid-area: titulo-tienda;
+        }
+        .filtros-tienda{
+            grid-area: filtros-tienda;
+        }
+        .tienda-promociones{
+            grid-area: tienda-promociones;
+            
+        }
+        .tienda-geles{
+            grid-area: tienda-geles;
+            
+        }
+        .tienda-tijeras{
+            grid-area: tienda-tijeras;
+            
+        }
+        .tienda-tintes{
+            grid-area: tienda-tintes;
+            
+        }
+    } 
+}

@@ -1,0 +1,28 @@
+.main-turnos {  display: flex;
+    flex-direction:column;
+    .titulo-turnos { grid-area: titulo-turnos; 
+        background-image: linear-gradient($color_fondo, $color_fondo_marron);    
+    }
+    .formulario{
+        display: flex;
+        justify-content: center;
+        background-color: $color_fondo_marron;
+        .forms { 
+            background-color: $color_fondo_oscuro ;
+            color: $color_fondo;
+            margin: 30px 5px ;
+            padding: 10px 30px;
+            border-radius: 10px;
+            max-width: 100%;
+            max-width: 1000px;
+            .enviar{
+                display: flex;
+                justify-content: center;
+                margin-top: 20px ;
+                .detalle-boton{
+                    background-color: $color_fondo_claro;
+                }
+            }
+        }
+    }
+}

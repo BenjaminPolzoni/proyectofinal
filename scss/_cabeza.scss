@@ -1,0 +1,114 @@
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1.7fr 1.7fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "cabeza cabeza cabeza cabeza"
+        "imagenlogo menu menu menu"
+        "imagenlogo menu menu menu";
+    .cabeza{
+        grid-area: cabeza;
+        background-color:$color_fondo_oscuro;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .buscador{
+            border-radius: 2210px;
+            width: 400px;
+            height: 50px;
+        }
+        .lista{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+        }
+        .redes-sociales{
+            justify-content: center;
+            align-items: end;
+            .redes{
+                max-width:40px;
+            }                
+        }
+    }
+    .imagenlogo { grid-area: imagenlogo; 
+        display: flex;
+        justify-content: end;
+        background-color:$color_fondo;
+        margin-bottom: 10px ;
+        margin-top: 10px;
+        .logo{
+            margin: 4px;
+            border: 4px rgb(65, 46, 17) double;
+            border-radius: 49%;
+            width: 200px;
+            animation-duration: 2s;
+            animation-name: movimiento_logo;
+            animation-iteration-count: infinite;
+        }
+        @keyframes movimiento_logo {
+            0%{transform: translateX(2px);}
+            10%{transform: translateX(4px);}
+            20%{transform: translateX(6px);}
+            30%{transform: translateX(8px);}
+            40%{transform: translateX(10px);}
+            50%{transform: translateX(12px);}
+            60%{transform: translateX(10px);}
+            70%{transform: translateX(8px);}
+            80%{transform: translateX(6px);}
+            90%{transform: translateX(4px);}
+            100%{transform: translateX(2px);}
+            
+        }
+    }
+    .menu { grid-area: menu; 
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        background-color:rgb(249, 209, 160) ;
+        .navegacion-li{
+            padding: 25px;
+            margin-left: 7rem;
+            border: rgb(65, 46, 17) 2px solid;
+            border-radius: 10px;
+            .nav-link{
+                color: black;
+                transition: all 0.2s ease;
+                &:hover{
+                    transform: scale(1.2 , 1.2);
+                }
+            }
+            .posicion{
+                background-color: $color_fondo_oscuro;
+                color: aliceblue;
+            }
+            
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    /* cabeza responsiv */
+    header {  display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: auto 1fr 1fr;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "cabeza cabeza "
+            "imagenlogo imagenlogo"
+            "menu menu";
+        .imagenlogo{
+            justify-content: center;
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+        
+        .menu{
+            justify-content: center;
+            .navegacion-li{
+                margin-left: 0;
+                margin: 1rem;
+            }
+        }
+    }
+}
