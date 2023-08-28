@@ -31,7 +31,7 @@
         background-color: $color_fondo_marron;
     }
 }
-@media screen and (max-width: 750px){
+@include tablet {
     .main-tienda {  display: grid;
         grid-template-columns: 0.5fr 1fr 1fr;
         grid-template-rows: 1fr 0.1fr auto auto auto auto;
@@ -43,27 +43,13 @@
             "tienda-geles tienda-geles tienda-geles"
             "tienda-tijeras tienda-tijeras tienda-tijeras"
             "tienda-tintes tienda-tintes tienda-tintes";
-        .titulo-tienda{
-            grid-area: titulo-tienda;
-        }
-        .filtros-tienda{
-            grid-area: filtros-tienda;
-        }
-        .tienda-promociones{
-            grid-area: tienda-promociones;
-            
-        }
-        .tienda-geles{
-            grid-area: tienda-geles;
-            
-        }
-        .tienda-tijeras{
-            grid-area: tienda-tijeras;
-            
-        }
-        .tienda-tintes{
-            grid-area: tienda-tintes;
-            
+        .productos{
+            display: flex;
+            flex-wrap: wrap;
+            .card{
+                width:210px;
+                margin-top: 10px;
+            }
         }
     } 
 }

@@ -55,15 +55,6 @@
             align-items: center;
         }
         .estilos-populares { grid-area: estilos-populares; }
-        .ofertas-destacadas{ grid-area: ofertas-destacadas; 
-            .productos{
-                display: flex;
-                flex-wrap: wrap;
-                .card{
-                    width: 210px;
-                    margin-top: 10px;
-                }
-            }
-        }    
+        .ofertas-destacadas{ grid-area: ofertas-destacadas;}    
     }
 }

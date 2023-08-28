@@ -3,3 +3,20 @@ $color_fondo_claro: rgb(250, 228, 201);
 $color_fondo_oscuro: rgb(65, 46, 17);
 $color_fondo_marron: rgb(107, 77, 31);
 $color_filtros: rgb(126, 126, 126);
+
+@mixin mobile {
+    @media screen and (max-width:576px){
+        @content;
+    }
+}
+@mixin tablet {
+    @media screen and (max-width: 750px){
+        @content;
+    }
+}
+@mixin monitor {
+    @media screen and (max-width: 1023px){
+        @content;
+    }
+}
+
