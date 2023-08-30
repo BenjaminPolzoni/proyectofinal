@@ -3,6 +3,7 @@ $color_fondo_claro: rgb(250, 228, 201);
 $color_fondo_oscuro: rgb(65, 46, 17);
 $color_fondo_marron: rgb(107, 77, 31);
 $color_filtros: rgb(126, 126, 126);
+$color_boton:#8a6d65;
 
 @mixin mobile {
     @media screen and (max-width:576px){
@@ -19,4 +20,13 @@ $color_filtros: rgb(126, 126, 126);
         @content;
     }
 }
-
+@mixin card_adaptada{
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        .card{
+            min-width: 210px;
+            margin-top: 10px;
+        }
+    }
+}

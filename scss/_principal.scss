@@ -39,7 +39,7 @@
         padding-top: 2rem;
     }
 }
-@media screen and (max-width: 750px){
+@include tablet {
     .main-index {  display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto;
@@ -49,12 +49,10 @@
             "titulo-index titulo-index"
             "estilos-populares estilos-populares"
             "ofertas-destacadas ofertas-destacadas";
-        .titulo-index { grid-area: titulo-index; 
+        .titulo-index { 
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-        .estilos-populares { grid-area: estilos-populares; }
-        .ofertas-destacadas{ grid-area: ofertas-destacadas;}    
+        } 
     }
 }

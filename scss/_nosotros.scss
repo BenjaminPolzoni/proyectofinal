@@ -81,7 +81,7 @@
         }
     }
 }
-@media screen and (max-width: 750px){
+@include tablet{
     .main-nosotros {  display: grid;
         grid-template-columns: 1fr 1fr 1fr ;
         grid-template-rows: auto auto auto 1fr;
@@ -91,15 +91,7 @@
             "descripcion-nosotros descripcion-nosotros descripcion-nosotros"
             "nosotros-ubicacion nosotros-ubicacion nosotros-ubicacion"
             "nosotros-empleados nosotros-empleados nosotros-empleados ";
-        
-        .titulo-nosotros { grid-area: titulo-nosotros; 
-            
-        }
-        .descripcion-nosotros{
-            grid-area: descripcion-nosotros;
-        }
         .nosotros-ubicacion{
-            grid-area: nosotros-ubicacion;
             .ubicaciones{
                 display: flex;
                 justify-content: center;

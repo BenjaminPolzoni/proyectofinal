@@ -43,13 +43,6 @@
             "tienda-geles tienda-geles tienda-geles"
             "tienda-tijeras tienda-tijeras tienda-tijeras"
             "tienda-tintes tienda-tintes tienda-tintes";
-        .productos{
-            display: flex;
-            flex-wrap: wrap;
-            .card{
-                width:210px;
-                margin-top: 10px;
-            }
-        }
+        @include card_adaptada
     } 
 }

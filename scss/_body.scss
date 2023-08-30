@@ -23,7 +23,7 @@ body{
         color: rgb(38, 38, 35);
     }
     .titulos{
-        background-color: $color_fondo_claro;
+        background-color: bisque;
         margin: 0px;
         border: 5px rgb(74, 72, 72) double;
         margin: 10px 5px ;
@@ -32,29 +32,32 @@ body{
     }
     .productos{
         display: flex;
-        flex-direction: row;
-        justify-content: center;
         justify-content: space-evenly;
         margin: 10px;
         padding: 5px;
         .card{
             width: 19% ;
             background-color: $color_fondo_claro;
-            .card-title{
-                font-family: 'Times New Roman', Times, serif;
-                background-color: black;
-                border-radius: 4px;
-                color: white;
-                text-align: center;
-            }
-            .btn-mio{
-                background-color: $color_fondo_marron;
-                color: white;
-                &:hover{
-                    transform: scale(1.1 , 1.2);
+            .card-body{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .card-title{
+                    font-family: 'Times New Roman', Times, serif;
+                    background-color: black;
+                    border-radius: 4px;
+                    color: white;
+                    text-align: center;
                 }
-                &:active{
-                    background-color: $color_fondo_oscuro;
+                .btn-mio{
+                    background-color: $color_boton;
+                    color: white;
+                    &:hover{
+                        transform: scale(1.1 , 1.2);
+                    }
+                    &:active{
+                        background-color: $color_fondo_oscuro;
+                    }
                 }
             }
         }

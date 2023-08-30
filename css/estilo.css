@@ -18,34 +18,36 @@ body {
     text-decoration: none;
     color: #262623; }
   body .titulos {
-    background-color: #fae4c9;
+    background-color: bisque;
     margin: 0px;
     border: 5px #4a4848 double;
     margin: 10px 5px;
     border-radius: 10px; }
   body .productos {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     justify-content: space-evenly;
     margin: 10px;
     padding: 5px; }
     body .productos .card {
       width: 19%;
       background-color: #fae4c9; }
-      body .productos .card .card-title {
-        font-family: 'Times New Roman', Times, serif;
-        background-color: black;
-        border-radius: 4px;
-        color: white;
-        text-align: center; }
-      body .productos .card .btn-mio {
-        background-color: #6b4d1f;
-        color: white; }
-        body .productos .card .btn-mio:hover {
-          transform: scale(1.1, 1.2); }
-        body .productos .card .btn-mio:active {
-          background-color: #412e11; }
+      body .productos .card .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        body .productos .card .card-body .card-title {
+          font-family: 'Times New Roman', Times, serif;
+          background-color: black;
+          border-radius: 4px;
+          color: white;
+          text-align: center; }
+        body .productos .card .card-body .btn-mio {
+          background-color: #8a6d65;
+          color: white; }
+          body .productos .card .card-body .btn-mio:hover {
+            transform: scale(1.1, 1.2); }
+          body .productos .card .card-body .btn-mio:active {
+            background-color: #412e11; }
 
 footer {
   grid-area: footer;
@@ -198,30 +200,22 @@ header {
     grid-auto-flow: row;
     grid-template-areas: "titulo-index titulo-index" "estilos-populares estilos-populares" "ofertas-destacadas ofertas-destacadas"; }
     .main-index .titulo-index {
-      grid-area: titulo-index;
       display: flex;
       justify-content: center;
-      align-items: center; }
-    .main-index .estilos-populares {
-      grid-area: estilos-populares; }
-    .main-index .ofertas-destacadas {
-      grid-area: ofertas-destacadas; } }
+      align-items: center; } }
 
 .main-estilos {
   display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto 1fr;
   grid-auto-columns: 1fr;
   grid-auto-flow: row;
-  grid-template-areas: "titulo-estilos titulo-estilos titulo-estilos titulo-estilos titulo-estilos" "filtro-estilos estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino" "filtro-estilos estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino"; }
+  grid-template-areas: "titulo-estilos titulo-estilos titulo-estilos titulo-estilos" "estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino" "estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino"; }
   .main-estilos .titulo-estilos {
     grid-area: titulo-estilos;
     background-image: linear-gradient(#f9d1a0, #412e11);
     display: flex;
     justify-content: center; }
-  .main-estilos .filtro-estilos {
-    grid-area: filtro-estilos;
-    background-color: #7e7e7e; }
   .main-estilos .estilos-corte-masculino {
     grid-area: estilos-corte-masculino;
     background-color: #412e11; }
@@ -233,25 +227,15 @@ header {
   .main-estilos {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr;
-    grid-template-rows: 1fr 0.1fr auto auto;
+    grid-template-rows: 1fr  auto auto;
     grid-auto-flow: row;
-    grid-template-areas: "titulo-estilos titulo-estilos titulo-estilos" "filtro-estilos filtro-estilos filtro-estilos" "estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino" "estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino"; }
+    grid-template-areas: "titulo-estilos titulo-estilos titulo-estilos" "estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino" "estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino"; }
     .main-estilos .productos {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center; }
+      flex-wrap: wrap; }
       .main-estilos .productos .card {
-        width: 190px;
-        margin-top: 10px;
-        margin: 5px; }
-    .main-estilos .main-estilos {
-      grid-area: main-estilos; }
-    .main-estilos .filtro-estilos {
-      grid-area: filtro-estilos; }
-    .main-estilos .estilos-corte-masculino {
-      grid-area: estilos-corte-masculino; }
-    .main-estilos .estilos-corte-femenino {
-      grid-area: estilos-corte-femenino; } }
+        min-width: 210px;
+        margin-top: 10px; } }
 
 .main-tienda {
   display: grid;
@@ -291,7 +275,7 @@ header {
       display: flex;
       flex-wrap: wrap; }
       .main-tienda .productos .card {
-        width: 210px;
+        min-width: 210px;
         margin-top: 10px; } }
 
 .main-turnos {
@@ -317,7 +301,7 @@ header {
         justify-content: center;
         margin-top: 20px; }
         .main-turnos .formulario .forms .enviar .detalle-boton {
-          background-color: #fae4c9; }
+          background-color: #8a6d65; }
 
 .main-nosotros {
   display: grid;
@@ -394,27 +378,21 @@ header {
     grid-template-rows: auto auto auto 1fr;
     grid-auto-flow: row;
     grid-template-areas: "titulo-nosotros titulo-nosotros titulo-nosotros " "descripcion-nosotros descripcion-nosotros descripcion-nosotros" "nosotros-ubicacion nosotros-ubicacion nosotros-ubicacion" "nosotros-empleados nosotros-empleados nosotros-empleados "; }
-    .main-nosotros .titulo-nosotros {
-      grid-area: titulo-nosotros; }
-    .main-nosotros .descripcion-nosotros {
-      grid-area: descripcion-nosotros; }
-    .main-nosotros .nosotros-ubicacion {
-      grid-area: nosotros-ubicacion; }
-      .main-nosotros .nosotros-ubicacion .ubicaciones {
-        display: flex;
-        justify-content: center;
-        justify-content: space-evenly;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "primera-ubi" "seguna-ubi"; }
-        .main-nosotros .nosotros-ubicacion .ubicaciones .primera-ubi {
-          grid-area: primera-ubi; }
-        .main-nosotros .nosotros-ubicacion .ubicaciones .seguna-ubi {
-          grid-area: seguna-ubi; }
-        .main-nosotros .nosotros-ubicacion .ubicaciones .mapa {
-          width: 20rem;
-          height: 15rem;
-          margin: 20px; }
+    .main-nosotros .nosotros-ubicacion .ubicaciones {
+      display: flex;
+      justify-content: center;
+      justify-content: space-evenly;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "primera-ubi" "seguna-ubi"; }
+      .main-nosotros .nosotros-ubicacion .ubicaciones .primera-ubi {
+        grid-area: primera-ubi; }
+      .main-nosotros .nosotros-ubicacion .ubicaciones .seguna-ubi {
+        grid-area: seguna-ubi; }
+      .main-nosotros .nosotros-ubicacion .ubicaciones .mapa {
+        width: 20rem;
+        height: 15rem;
+        margin: 20px; }
     .main-nosotros .nosotros-empleados {
       grid-area: nosotros-empleados; } }
