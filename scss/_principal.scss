@@ -59,6 +59,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-        } 
+        }
+        .ofertas-destacadas{
+            @include card_adaptada
+        }
     }
 }

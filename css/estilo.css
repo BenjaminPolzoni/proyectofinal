@@ -211,7 +211,13 @@ header {
     .main-index .titulo-index {
       display: flex;
       justify-content: center;
-      align-items: center; } }
+      align-items: center; }
+    .main-index .ofertas-destacadas .productos {
+      display: flex;
+      flex-wrap: wrap; }
+      .main-index .ofertas-destacadas .productos .card {
+        min-width: 210px;
+        margin-top: 10px; } }
 
 .main-estilos {
   display: grid;
