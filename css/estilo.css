@@ -78,16 +78,18 @@ header {
     header .cabeza .lista {
       list-style: none;
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      margin: 0px 10px; }
     header .cabeza .redes-sociales {
       justify-content: center;
       align-items: end; }
       header .cabeza .redes-sociales .redes {
-        max-width: 40px; }
+        max-width: 40px;
+        margin: 3px; }
   header .imagenlogo {
     grid-area: imagenlogo;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     background-color: #f9d1a0;
     margin-bottom: 10px;
     margin-top: 10px; }
@@ -95,7 +97,8 @@ header {
       margin: 4px;
       border: 4px #412e11 double;
       border-radius: 49%;
-      width: 200px;
+      max-width: 250px;
+      max-height: 250px;
       animation-duration: 2s;
       animation-name: movimiento_logo;
       animation-iteration-count: infinite; }
@@ -179,13 +182,19 @@ header {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      justify-content: space-evenly; }
+      justify-content: space-evenly;
+      border-radius: 20%; }
       .main-index .estilos-populares .cortes .carousel {
         width: 750px;
-        margin: 1rem 10px; }
+        margin: 10px; }
+        .main-index .estilos-populares .cortes .carousel .img-carousel {
+          border-radius: 45%; }
         .main-index .estilos-populares .cortes .carousel .color-carrusel {
           color: black;
-          background-color: #fae4c9; }
+          background-color: #8a6d65;
+          margin: 0px 100px;
+          border-radius: 10px;
+          border: 2px black solid; }
   .main-index .ofertas-destacadas {
     grid-area: ofertas-destacadas;
     background-color: #412e11;

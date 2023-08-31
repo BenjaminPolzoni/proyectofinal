@@ -22,13 +22,19 @@
             flex-direction: row;
             justify-content: center;
             justify-content: space-evenly;
-            
+            border-radius: 20%;
             .carousel{
                 width: 750px ;
-                margin: 1rem 10px;
+                margin: 10px;
+                .img-carousel{
+                    border-radius: 45%;
+                }
                 .color-carrusel{
                     color: rgb(0, 0, 0);
-                    background-color: $color_fondo_claro;
+                    background-color: $color_boton;
+                    margin:0px 100px ;
+                    border-radius: 10px;
+                    border: 2px black solid;
                 }
             }
         } 

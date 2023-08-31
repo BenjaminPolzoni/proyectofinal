@@ -23,18 +23,20 @@ header{
             list-style: none;
             display: flex;
             flex-direction: row;
+            margin:0px 10px ;
         }
         .redes-sociales{
             justify-content: center;
             align-items: end;
             .redes{
                 max-width:40px;
+                margin: 3px;
             }                
         }
     }
     .imagenlogo { grid-area: imagenlogo; 
         display: flex;
-        justify-content: end;
+        justify-content: center;
         background-color:$color_fondo;
         margin-bottom: 10px ;
         margin-top: 10px;
@@ -42,7 +44,8 @@ header{
             margin: 4px;
             border: 4px rgb(65, 46, 17) double;
             border-radius: 49%;
-            width: 200px;
+            max-width: 250px;
+            max-height: 250px;
             animation-duration: 2s;
             animation-name: movimiento_logo;
             animation-iteration-count: infinite;
