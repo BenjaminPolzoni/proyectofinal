@@ -37,7 +37,7 @@
             justify-content: center;
             justify-content: space-evenly;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: auto auto;
             grid-template-rows: 1fr;
             grid-template-areas: 
             "primera-ubi seguna-ubi";
@@ -54,8 +54,8 @@
                 color: aliceblue;
             }
             .mapa{
-                width: 28rem;
-                height: 20rem;
+                width: 100%;
+                height: 400px;
                 margin: 20px;
             }
         }
@@ -92,6 +92,7 @@
             "nosotros-ubicacion nosotros-ubicacion nosotros-ubicacion"
             "nosotros-empleados nosotros-empleados nosotros-empleados ";
         .nosotros-ubicacion{
+            margin: 0;
             .ubicaciones{
                 display: flex;
                 justify-content: center;
@@ -109,9 +110,8 @@
                     grid-area: seguna-ubi;
                 }
                 .mapa{
-                    width: 20rem;
+                    width: 70%;
                     height: 15rem;
-                    margin: 20px;
                 }
             }
         }

@@ -21,15 +21,17 @@ body {
     background-color: bisque;
     margin: 0px;
     border: 5px #4a4848 double;
-    margin: 10px 5px;
+    margin: 5px 30px;
     border-radius: 10px; }
   body .productos {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     margin: 10px;
     padding: 5px; }
     body .productos .card {
-      width: 19%;
+      margin: 10px 2px;
+      width: 300px;
       background-color: #fae4c9; }
       body .productos .card .card-body {
         display: flex;
@@ -74,18 +76,16 @@ header {
     header .cabeza .buscador {
       border-radius: 2210px;
       width: 400px;
-      height: 50px; }
+      height: 50px;
+      padding: 10px; }
     header .cabeza .lista {
       list-style: none;
       display: flex;
       flex-direction: row;
+      padding: 0;
       margin: 0px 10px; }
-    header .cabeza .redes-sociales {
-      justify-content: center;
-      align-items: end; }
-      header .cabeza .redes-sociales .redes {
-        max-width: 40px;
-        margin: 3px; }
+    header .cabeza .redes {
+      width: 40px; }
   header .imagenlogo {
     grid-area: imagenlogo;
     display: flex;
@@ -134,7 +134,7 @@ header {
     background-color: #f9d1a0; }
     header .menu .navegacion-li {
       padding: 25px;
-      margin-left: 7rem;
+      margin-left: 10rem;
       border: #412e11 2px solid;
       border-radius: 10px; }
       header .menu .navegacion-li .nav-link {
@@ -163,10 +163,15 @@ header {
         margin-left: 0;
         margin: 1rem; } }
 
+@media screen and (max-width: 750px) {
+  header .cabeza .buscador {
+    text-align: center;
+    padding: 0; } }
+
 .main-index {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr 0.7fr;
+  grid-template-rows: auto auto 0.7fr;
   grid-auto-flow: row;
   grid-template-areas: "titulo-index titulo-index titulo-index" "estilos-populares estilos-populares estilos-populares" "ofertas-destacadas ofertas-destacadas ofertas-destacadas"; }
   .main-index .titulo-index {
@@ -204,7 +209,7 @@ header {
   .main-index {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto 0.5fr auto;
     grid-auto-columns: 1fr;
     grid-auto-flow: row;
     grid-template-areas: "titulo-index titulo-index" "estilos-populares estilos-populares" "ofertas-destacadas ofertas-destacadas"; }
@@ -212,11 +217,11 @@ header {
       display: flex;
       justify-content: center;
       align-items: center; }
-    .main-index .ofertas-destacadas .productos {
+    .main-index .productos {
       display: flex;
       flex-wrap: wrap; }
-      .main-index .ofertas-destacadas .productos .card {
-        min-width: 210px;
+      .main-index .productos .card {
+        width: 220px;
         margin-top: 10px; } }
 
 .main-estilos {
@@ -249,7 +254,7 @@ header {
       display: flex;
       flex-wrap: wrap; }
       .main-estilos .productos .card {
-        min-width: 210px;
+        width: 220px;
         margin-top: 10px; } }
 
 .main-tienda {
@@ -290,7 +295,7 @@ header {
       display: flex;
       flex-wrap: wrap; }
       .main-tienda .productos .card {
-        min-width: 210px;
+        width: 220px;
         margin-top: 10px; } }
 
 .main-turnos {
@@ -351,7 +356,7 @@ header {
       justify-content: center;
       justify-content: space-evenly;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: auto auto;
       grid-template-rows: 1fr;
       grid-template-areas: "primera-ubi seguna-ubi"; }
       .main-nosotros .nosotros-ubicacion .ubicaciones .primera-ubi {
@@ -365,8 +370,8 @@ header {
         text-align: center;
         color: aliceblue; }
       .main-nosotros .nosotros-ubicacion .ubicaciones .mapa {
-        width: 28rem;
-        height: 20rem;
+        width: 100%;
+        height: 400px;
         margin: 20px; }
   .main-nosotros .nosotros-empleados {
     grid-area: nosotros-empleados;
@@ -393,21 +398,22 @@ header {
     grid-template-rows: auto auto auto 1fr;
     grid-auto-flow: row;
     grid-template-areas: "titulo-nosotros titulo-nosotros titulo-nosotros " "descripcion-nosotros descripcion-nosotros descripcion-nosotros" "nosotros-ubicacion nosotros-ubicacion nosotros-ubicacion" "nosotros-empleados nosotros-empleados nosotros-empleados "; }
-    .main-nosotros .nosotros-ubicacion .ubicaciones {
-      display: flex;
-      justify-content: center;
-      justify-content: space-evenly;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas: "primera-ubi" "seguna-ubi"; }
-      .main-nosotros .nosotros-ubicacion .ubicaciones .primera-ubi {
-        grid-area: primera-ubi; }
-      .main-nosotros .nosotros-ubicacion .ubicaciones .seguna-ubi {
-        grid-area: seguna-ubi; }
-      .main-nosotros .nosotros-ubicacion .ubicaciones .mapa {
-        width: 20rem;
-        height: 15rem;
-        margin: 20px; }
+    .main-nosotros .nosotros-ubicacion {
+      margin: 0; }
+      .main-nosotros .nosotros-ubicacion .ubicaciones {
+        display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "primera-ubi" "seguna-ubi"; }
+        .main-nosotros .nosotros-ubicacion .ubicaciones .primera-ubi {
+          grid-area: primera-ubi; }
+        .main-nosotros .nosotros-ubicacion .ubicaciones .seguna-ubi {
+          grid-area: seguna-ubi; }
+        .main-nosotros .nosotros-ubicacion .ubicaciones .mapa {
+          width: 70%;
+          height: 15rem; }
     .main-nosotros .nosotros-empleados {
       grid-area: nosotros-empleados; } }

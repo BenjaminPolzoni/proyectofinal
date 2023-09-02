@@ -18,20 +18,17 @@ header{
             border-radius: 2210px;
             width: 400px;
             height: 50px;
+            padding: 10px;
         }
         .lista{
             list-style: none;
             display: flex;
             flex-direction: row;
+            padding: 0;
             margin:0px 10px ;
         }
-        .redes-sociales{
-            justify-content: center;
-            align-items: end;
-            .redes{
-                max-width:40px;
-                margin: 3px;
-            }                
+        .redes{
+            width:40px; 
         }
     }
     .imagenlogo { grid-area: imagenlogo; 
@@ -72,7 +69,7 @@ header{
         background-color:$color_fondo ;
         .navegacion-li{
             padding: 25px;
-            margin-left: 7rem;
+            margin-left: 10rem;
             border: rgb(65, 46, 17) 2px solid;
             border-radius: 10px;
             .nav-link{
@@ -110,6 +107,16 @@ header{
             .navegacion-li{
                 margin-left: 0;
                 margin: 1rem;
+            }
+        }
+    }
+}
+@include tablet{
+    header{
+        .cabeza{
+            .buscador{
+                text-align: center;
+                padding: 0;
             }
         }
     }
