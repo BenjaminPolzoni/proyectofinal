@@ -5,6 +5,7 @@ $color_fondo_marron: rgb(107, 77, 31);
 $color_filtros: rgb(126, 126, 126);
 $color_boton:#8a6d65;
 
+
 @mixin mobile {
     @media screen and (max-width:576px){
         @content;
@@ -25,8 +26,18 @@ $color_boton:#8a6d65;
         display: flex;
         flex-wrap: wrap;
         .card{
-            width: 220px;
+            width: 200px;
             margin-top: 10px;
+        }
+    }
+    @media screen and(max-width:492px){
+        .productos{
+            .card{
+                max-width: 170px;
+                .card-body{
+                    font-size: small;             
+                }
+            }
         }
     }
 }

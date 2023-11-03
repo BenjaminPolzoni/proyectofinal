@@ -25,13 +25,13 @@ body {
     border-radius: 10px; }
   body .productos {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
-    margin: 10px;
+    margin: 5px 10px;
     padding: 5px; }
     body .productos .card {
-      margin: 10px 2px;
-      width: 300px;
+      margin: 10px 10px;
+      width: 270px;
       background-color: #fae4c9; }
       body .productos .card .card-body {
         display: flex;
@@ -221,8 +221,13 @@ header {
       display: flex;
       flex-wrap: wrap; }
       .main-index .productos .card {
-        width: 220px;
+        width: 200px;
         margin-top: 10px; } }
+  @media screen and (max-width: 750px) and (max-width: 492px) {
+    .main-index .productos .card {
+      max-width: 170px; }
+      .main-index .productos .card .card-body {
+        font-size: small; } }
 
 .main-estilos {
   display: grid;
@@ -254,8 +259,13 @@ header {
       display: flex;
       flex-wrap: wrap; }
       .main-estilos .productos .card {
-        width: 220px;
+        width: 200px;
         margin-top: 10px; } }
+  @media screen and (max-width: 750px) and (max-width: 492px) {
+    .main-estilos .productos .card {
+      max-width: 170px; }
+      .main-estilos .productos .card .card-body {
+        font-size: small; } }
 
 .main-tienda {
   display: grid;
@@ -295,8 +305,13 @@ header {
       display: flex;
       flex-wrap: wrap; }
       .main-tienda .productos .card {
-        width: 220px;
+        width: 200px;
         margin-top: 10px; } }
+  @media screen and (max-width: 750px) and (max-width: 492px) {
+    .main-tienda .productos .card {
+      max-width: 170px; }
+      .main-tienda .productos .card .card-body {
+        font-size: small; } }
 
 .main-turnos {
   display: flex;
